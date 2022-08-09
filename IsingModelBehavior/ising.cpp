@@ -14,7 +14,6 @@
 int main() {
 
 	int spin[N][N];
-	int n = N - 1;
 
 	// ランダムにスピンの向きを決める
 	srand((unsigned)time(NULL));
@@ -39,6 +38,7 @@ int main() {
 		for (int step = 1; step < M_MAX; step++) {
 
 			// エネルギーの計算
+			// 隣のスピンが存在しない場合(端のスピン)は、0番目のスピンを参照する
 			double energy = 0;
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
@@ -64,6 +64,7 @@ int main() {
 			spin[x][y] *= -1;
 
 			// 反転後のエネルギーを計算
+			// 隣のスピンが存在しない場合(端のスピン)は、0番目のスピンを参照する
 			double flippedEnergy = 0;
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
