@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ising.cpp" />
+    <ClCompile Include="CalcCos.cpp" />
+    <ClCompile Include="Ising.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IsingOperation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

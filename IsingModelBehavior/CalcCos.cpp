@@ -5,17 +5,11 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-#include "IsingOperation.h"
 
-#define N 50			// スピン数
-#define J 1				// 結合定数
-#define M_MIN 1000000	// 解の下限
-#define M_MAX 1100000	// 解の上限
-//#define T 2.0			// 温度
-
-int main() {
-
-	int spin[N][N];
+void calcCos(int n, int J, int M_MIN, int M_MAX) {
+	/*
+	int spin[n][n];
+	double radian = 0 * M_PI / 180.0;
 
 	// ランダムにスピンの向きを決める
 	srand((unsigned)time(NULL));
@@ -45,16 +39,16 @@ int main() {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if (i == N - 1 && j == N - 1) {
-						energy = energy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][0]);
+						energy = energy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][0]) + cos(radian) * spin[i][j];
 					}
 					else if (i == N - 1) {
-						energy = energy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][j + 1]);
+						energy = energy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][j + 1]) + cos(radian) * spin[i][j];
 					}
 					else if (j == N - 1) {
-						energy = energy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][0]);
+						energy = energy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][0]) + cos(radian) * spin[i][j];
 					}
 					else {
-						energy = energy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][j + 1]);
+						energy = energy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][j + 1]) + cos(radian) * spin[i][j];
 					}
 				}
 			}
@@ -71,16 +65,16 @@ int main() {
 			for (int i = 0; i < N; i++) {
 				for (int j = 0; j < N; j++) {
 					if (i == N - 1 && j == N - 1) {
-						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][0]);
+						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][0]) + cos(radian) * spin[i][j];
 					}
 					else if (i == N - 1) {
-						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][j + 1]);
+						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[0][j] + spin[i][j] * spin[i][j + 1]) + cos(radian) * spin[i][j];
 					}
 					else if (j == N - 1) {
-						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][0]);
+						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][0]) + cos(radian) * spin[i][j];
 					}
 					else {
-						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][j + 1]);
+						flippedEnergy = flippedEnergy - J * (spin[i][j] * spin[i + 1][j] + spin[i][j] * spin[i][j + 1]) + cos(radian) * spin[i][j];
 					}
 				}
 			}
@@ -107,7 +101,7 @@ int main() {
 				sa = sa / (N * N);
 				sa2 = fabs(sa) / (M_MAX - M_MIN) + sa2;
 			}
-			
+
 		}
 		printf("T=%.1f : %f\n", temp, sa2);
 
@@ -115,5 +109,5 @@ int main() {
 	system("pouse");
 
 	return 0;
-
+	*/
 }
