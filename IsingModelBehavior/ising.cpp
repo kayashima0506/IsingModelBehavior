@@ -5,8 +5,6 @@
 #define _USE_MATH_DEFINES
 #include <math.h>
 
-#include "IsingOperation.h"
-
 #define N 50			// ƒXƒsƒ“”
 #define J 1				// Œ‹‡’è”
 #define M_MIN 1000000	// ‰ğ‚Ì‰ºŒÀ
